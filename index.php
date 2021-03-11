@@ -5,7 +5,7 @@
 /*
 Plugin Name: Importer
 Plugin URI: https://github.com/webtechandbiz/WTAB-Importer
-Description: Plugin used to (try to) import (almost) anything from any source in WordPress and WooCommerce
+Description: simplify complex import issues
 Version: 0.1
 Author: https://github.com/webtechandbiz
 Author URI: https://github.com/webtechandbiz
