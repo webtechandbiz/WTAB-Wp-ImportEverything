@@ -35,6 +35,8 @@ include($admin_functions__folder_path.'-functions.php');
 
 include($admin_functions__folder_path.'-functions-importer.php');
 include($admin_functions__folder_path.'-functions-importer-read.php');
+include($admin_functions__folder_path.'-functions-importer-read-xml.php');
+include($admin_functions__folder_path.'-functions-importer-read-csv.php');
 include($admin_functions__folder_path.'-functions-importer-save.php');
 include($admin_functions__folder_path.'-functions-importer-test-the-importer.php');
 
