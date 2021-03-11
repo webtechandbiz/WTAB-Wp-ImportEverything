@@ -1,0 +1,19 @@
+.admin_droswavosw_pnl_form_settings_page_table table{
+    width: 100%;
+}
+.admin_droswavosw_pnl_form_settings_page_table input{
+    width: 100%;
+}
+
+.admin_droswavosw_pnl_form_settings_page_table .wtab_chk{
+    width: auto;
+}
+
+.admin_droswavosw_pnl_form_settings_page_table textarea {
+    width: 100%;
+    min-height: 200px;
+}
+
+
+h1{margin-bottom:5px}h2{margin-top:5px;margin-bottom:5px}h3{margin-top:5px;margin-bottom:0px}p{margin:3px !important}
+td{padding: 3px}
