@@ -12,6 +12,13 @@ function _do_importer($_limit){
     if($_WS_url_importer === '' || $_format_importer === ''){
         return false;
     }
+
+    $pos = strpos($_WS_url_importer, 'http');
+    if($_WS_url_importer && $pos === false) {
+        $date = new Date();
+        $_WS_url_importer = get_attachment_url_by_slug($_WS_url_importer).'-'.$date->format('Ymd');
+    }
+
     try {
         //#Read: elemento che dialoga con la fonte dati
         $feed = get_feed($_WS_url_importer, $_format_importer);
@@ -76,5 +83,21 @@ function _get_do_insert($active__importer){
         return true;
     }else{
         return false;
+    }
+}
+
+function get_attachment_url_by_slug( $slug ) {
+    $args = array(
+      'name' => $slug,
+      'posts_per_page' => 1,
+      'post_type' => 'attachment',
+      'post_status' => 'inherit',
+    );
+    $_header = get_posts( $args );
+    if($_header){
+        $header = array_pop($_header);
+        return wp_get_attachment_url($header->ID);
+    }else{
+        return '';
     }
 }
