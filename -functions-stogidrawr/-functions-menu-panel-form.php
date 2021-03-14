@@ -27,7 +27,7 @@ function _getSectionsFields(){
             array(
                 'section_slug' => 'section_config',
                 'fields' => array(
-                    'WS URL' => 
+                    'WS URL (with http/https)<br> or file name with date <br>(naming: filename-[YYYYMMDD])' => 
                         array(
                             'field_slug' => 'ws_url__importer',
                             'field_type' => 'text' //# It could be: text, textarea, select, checkbox
