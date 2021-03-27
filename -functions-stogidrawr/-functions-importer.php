@@ -41,7 +41,7 @@ function _do_importer($import_session_code, $_limit){
                         break;
                     }
                 }
-                if(is_array($keyfieldvalues) && !in_array($_item->$admin__import_key['field'], $keyfieldvalues))}
+                if(is_array($keyfieldvalues) && !in_array($_item->$admin__import_key['field'], $keyfieldvalues)){
                     //#Save: elemento che effettua l'inserimento a DB in base alle configurazioni
                     $_save_importer_stogidrawr = save_importer_stogidrawr($import_session_code, $_item, $_inserted_count);
                     $_inserted_post_id = $_save_importer_stogidrawr['inserted_post_id'];
