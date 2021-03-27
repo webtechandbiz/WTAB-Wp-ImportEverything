@@ -1,7 +1,7 @@
 <?php
 
 function _get_feed_db($_auth){
-    $db = new PDO("mysql:host=$_auth['dbhost'];port=$_auth['dbport'];dbname=$_auth['dbname']", $_auth['dbusername'], $_auth['dbpassword']);
+    $db = new PDO('mysql:host='.$_auth['dbhost'].';port='.$_auth['dbport'].';dbname='.$_auth['dbname'], $_auth['dbusername'], $_auth['dbpassword']);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $db->exec("SET NAMES 'utf8';");
 
