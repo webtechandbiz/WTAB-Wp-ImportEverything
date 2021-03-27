@@ -66,6 +66,9 @@ function _set_featured_image($image_url, $post_id){
         return false;
     }
 }
+function log_for_rollback($import_session_code, $table, $item_id){
+    
+}
 if ( ! function_exists( 'is_woocommerce_activated' ) ) {
     function is_woocommerce_activated() {
         if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
