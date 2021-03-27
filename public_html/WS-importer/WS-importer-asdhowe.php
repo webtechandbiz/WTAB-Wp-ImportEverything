@@ -14,7 +14,7 @@ if(is_user_logged_in() && current_user_can('administrator') ) {
         global $admin__log_folder_path;
         global $admin__imported_folder_path;
         
-        $import_session_code = $now->format('Ymd-His').'-'._get_import_code();
+        $import_session_code = $admin__log_folder_path.$now->format('Ymd-His').'-'._get_import_code();
 
         try {
             $date_log = new DateTime();
