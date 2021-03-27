@@ -15,6 +15,9 @@ License: MIT - https://opensource.org/licenses/mit-license.php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+global $admin__log_folder_path;
+global $admin__imported_folder_path;
+
 //# Setup
 $wtab_pnl_admin_folder_salt = 'pagibrebob';
 $wtab_pnl_admin_functions_folder_salt = 'stogidrawr';
@@ -22,6 +25,8 @@ $wtab_pnl_admin_functions_folder_salt = 'stogidrawr';
 //# Paths
 $admin__folder_path = plugin_dir_path( __FILE__ ).'admin-'.$wtab_pnl_admin_folder_salt.'/';
 $admin_functions__folder_path = $admin__folder_path.'-functions-'.$wtab_pnl_admin_functions_folder_salt.'/';
+$admin__log_folder_path = $admin__folder_path.'logs-'.$wtab_pnl_admin_functions_folder_salt.'/';
+$admin__imported_folder_path = $admin__folder_path.'data-'.$wtab_pnl_admin_functions_folder_salt.'/';
 
 // # URLs
 $wtab_pnl__url = plugin_dir_url(__FILE__);
