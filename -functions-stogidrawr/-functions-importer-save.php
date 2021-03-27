@@ -71,7 +71,11 @@ function _set_featured_image($image_url, $post_id){
     }
 }
 function log_for_rollback($import_session_code, $table, $item_id){
-    
+    if(file_exists($import_session_code)){
+        file_put_contents($import_session_code, $table.':'.$item_id.PHP_EOL, FILE_APPEND | LOCK_EX);
+    }else{
+        file_put_contents($import_session_code, $table.':'.$item_id.PHP_EOL);
+    }
 }
 if ( ! function_exists( 'is_woocommerce_activated' ) ) {
     function is_woocommerce_activated() {
