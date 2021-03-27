@@ -17,10 +17,12 @@ ini_set('display_errors', 1);
 
 global $admin__log_folder_path;
 global $admin__imported_folder_path;
+global $admin__import_key;
 
 //# Setup
 $wtab_pnl_admin_folder_salt = 'pagibrebob';
 $wtab_pnl_admin_functions_folder_salt = 'stogidrawr';
+$admin__import_key = array('table' => 'wp_posts', 'field' => 'post_title');
 
 //# Paths
 $admin__folder_path = plugin_dir_path( __FILE__ ).'admin-'.$wtab_pnl_admin_folder_salt.'/';
