@@ -2,7 +2,7 @@
 
 set_time_limit(3000);
 
-function _do_importer($_limit){
+function _do_importer($import_session_code, $_limit){
     $_inserted_count = $_item_count = 0;
 
     $_do_insert = _get_do_insert(get_option('active__importer'));
@@ -40,7 +40,7 @@ function _do_importer($_limit){
                     }
                 }
                 //#Save: elemento che effettua l'inserimento a DB in base alle configurazioni
-                $_save_importer_stogidrawr = save_importer_stogidrawr($_item, $_inserted_count);
+                $_save_importer_stogidrawr = save_importer_stogidrawr($import_session_code, $_item, $_inserted_count);
                 $_inserted_post_id = $_save_importer_stogidrawr['inserted_post_id'];
                 $_inserted_count = $_save_importer_stogidrawr['inserted_count'];
                 $_wp_insert_post_error = $_save_importer_stogidrawr['wp_insert_post_error']; //# TODO
