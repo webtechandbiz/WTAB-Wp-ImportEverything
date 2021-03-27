@@ -1,6 +1,6 @@
 <?php
 
-function save_importer_stogidrawr($_item, $_inserted_count){
+function save_importer_stogidrawr($import_session_code, $_item, $_inserted_count){
     $_wp_insert_post_error = array();
 
     $post_title = $_item->title->__toString();
@@ -8,6 +8,7 @@ function save_importer_stogidrawr($_item, $_inserted_count){
 
     switch ($_wp_insert_post_error) {
         case 'customposttype':
+            $table = 'wp_posts';
             $_insert_post_array = array(
                 'post_author' => get_option('wp_user_id__importer'),
                 'post_content' => $post_content,
@@ -19,6 +20,7 @@ function save_importer_stogidrawr($_item, $_inserted_count){
             break;
 
         case 'woocommerce':
+            $table = 'wp_posts';
             $_insert_post_array = array(
                 'post_author' => get_option('wp_user_id__importer'),
                 'post_content' => $post_content,
@@ -34,6 +36,8 @@ function save_importer_stogidrawr($_item, $_inserted_count){
     }
 
     $_inserted_post_id = wp_insert_post($_insert_post_array, $_wp_insert_post_error);
+
+    log_for_rollback($import_session_code, $table, $_inserted_post_id);
 
     $_inserted_count++;
     
