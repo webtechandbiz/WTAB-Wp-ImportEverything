@@ -40,7 +40,6 @@ function _do_importer($_limit){
                     }
                 }
                 //#Save: elemento che effettua l'inserimento a DB in base alle configurazioni
-                log_for_rollback($import_session_code, $_item, $_inserted_count);
                 $_save_importer_stogidrawr = save_importer_stogidrawr($_item, $_inserted_count);
                 $_inserted_post_id = $_save_importer_stogidrawr['inserted_post_id'];
                 $_inserted_count = $_save_importer_stogidrawr['inserted_count'];
