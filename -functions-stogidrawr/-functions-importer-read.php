@@ -19,6 +19,24 @@ function get_feed($ws_url__importer, $format__importer){
 
             return $sCSV;
 
+        case '3': //JSON
+            $_auth['username'] = get_option('username_basicauth__importer');
+            $_auth['password'] = get_option('password_basicauth__importer');
+
+            $sJSON = _get_feed_json($_auth, $ws_url__importer);
+
+            return $sJSON;
+
+        case '4': //DB
+            $_auth['dbhost'] = get_option('host_db__importer');
+            $_auth['dbusername'] = get_option('username_db__importer');
+            $_auth['dbpassword'] = get_option('password_db__importer');
+            $_auth['dbname'] = get_option('name_db__importer');
+
+            $sDB = _get_feed_db($_auth);
+
+            return $sDB;
+
         default:
             break;
     }
