@@ -37,7 +37,7 @@ function _getSectionsFields(){
                         array(
                             'field_slug' => 'format__importer',
                             'field_type' => 'select',
-                            'options' => array(0 => 'Select', 1 => 'XML', 2 => 'JSON')
+                            'options' => array(0 => 'Select', 1 => 'XML', 2 => 'CSV', 3 => 'JSON', 4 => 'DB')
                         )
                     ,
                     'Max products in importer' => 
