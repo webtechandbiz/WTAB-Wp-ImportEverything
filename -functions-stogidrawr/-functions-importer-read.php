@@ -29,6 +29,7 @@ function get_feed($ws_url__importer, $format__importer){
 
         case '4': //DB
             $_auth['dbhost'] = get_option('host_db__importer');
+            $_auth['dbhostdbport'] = get_option('port_db__importer');
             $_auth['dbusername'] = get_option('username_db__importer');
             $_auth['dbpassword'] = get_option('password_db__importer');
             $_auth['dbname'] = get_option('name_db__importer');
