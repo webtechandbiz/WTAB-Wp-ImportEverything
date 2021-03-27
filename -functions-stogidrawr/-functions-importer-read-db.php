@@ -31,5 +31,4 @@ function _get_feed_db($_auth){
     } catch(PDOException $pdoE) {
         var_dump($pdoE);
     }
-  
 }
