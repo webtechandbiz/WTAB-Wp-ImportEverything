@@ -1,7 +1,5 @@
 <?php
 
-
-
 function _get_feed_xml($_auth, $ws_url__importer){
     if($_auth['username'] !== '' && $_auth['password'] !== ''){
         $username = $_auth['username'];
